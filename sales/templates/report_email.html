@@ -2,8 +2,13 @@
 <html>
 <head>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
         .button {
-            background-color: #4CAF50; /* Verde */
+            background-color: #4CAF50;
             border: none;
             color: white;
             padding: 15px 32px;
@@ -21,8 +26,9 @@
     </style>
 </head>
 <body>
-    <h2>Reporte Diario de Ventas</h2>
-    <p>Haz clic en el botón a continuación para descargar el reporte en formato CSV.</p>
-    <a href="{{ download_url }}" class="button">Descargar Reporte</a>
+    <h2>Reporte Diario y Mensual Acumulado de Ventas</h2>
+    <p>Haz clic en el botón a continuación para descargar el reporte diario en formato CSV.</p>
+    <a href="{{ daily_url }}" class="button">Descargar Reporte Diario</a>
+    <a href="{{ monthly_url }}" class="button">Descargar Reporte Mensual</a>
 </body>
 </html>

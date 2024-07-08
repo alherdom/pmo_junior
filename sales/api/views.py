@@ -51,7 +51,7 @@ class SalesReportByDate(APIView):
 
 
 class SalesReportByMonth(APIView):
-    renderer_classes = [JSONRenderer, CustomCSVRenderer]
+    renderer_classes = [CustomCSVRenderer]
 
     def get(self, request, year, month):
         sales = Sale.objects.filter(date__year=year, date__month=month).order_by('date')
