@@ -37,21 +37,21 @@ def get_monthly_url():
     return f'http://localhost:8000/sales/month/{current_date.strftime("%Y")}/{current_date.strftime("%m")}/'
 
 
-while True:
-    current_time = datetime.datetime.now()
-    send_hour = 8
-
-    if current_time.hour == send_hour and current_time.minute == 0:
-        daily_url = get_daily_url()
-        monthly_url = get_monthly_url()
-        send_report_email('alherdom@outlook.com', daily_url, monthly_url)
-        time.sleep(60 * 60 * 24)
-    else:
-        time.sleep(60)
-
-
 # while True:
-#     daily_url = get_daily_url()
-#     monthly_url = get_monthly_url()
-#     send_report_email('alherdom@outlook.com', daily_url, monthly_url)
-#     time.sleep(60)
+#     current_time = datetime.datetime.now()
+#     send_hour = 8
+
+#     if current_time.hour == send_hour and current_time.minute == 0:
+#         daily_url = get_daily_url()
+#         monthly_url = get_monthly_url()
+#         send_report_email('alherdom@outlook.com', daily_url, monthly_url)
+#         time.sleep(60 * 60 * 24)
+#     else:
+#         time.sleep(60)
+
+
+while True:
+    daily_url = get_daily_url()
+    monthly_url = get_monthly_url()
+    send_report_email('alherdom@outlook.com', daily_url, monthly_url)
+    time.sleep(60)
