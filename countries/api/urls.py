@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import CountryList, CountryDetail
+from .views import CountryListView, CountryDetailView
 
 app_name = 'countries'
 
 urlpatterns = [
-    path('', CountryList.as_view(), name='country_list'),
-    path('<str:pk>/', CountryDetail.as_view(), name='country_detail'),
+    path('', CountryListView.as_view(), name='country_list'),
+    path('<int:pk>/', CountryDetailView.as_view(), name='country_detail'),
 ]

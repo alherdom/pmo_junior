@@ -1,0 +1,8 @@
+.vscode
+*.env
+*.venv
+*.vscode
+*.pyc
+media
+db.sqlite3
+.DS_Store

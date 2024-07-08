@@ -7,7 +7,7 @@ class Sale(models.Model):
     country = models.CharField(max_length=100)
     income = models.DecimalField(max_digits=10, decimal_places=2)
     type = models.CharField(max_length=100)
-    sellers = models.ManyToManyField(Seller)
+    sellers = models.ManyToManyField(Seller, related_name='sales')
 
     class Meta:
         indexes = [

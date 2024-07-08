@@ -1,7 +1,7 @@
 from django.db import models
 
 class Country(models.Model):
-    ISO2 = models.CharField(max_length=2, primary_key=True)
+    ISO2 = models.CharField(max_length=2, unique=True)
     name = models.CharField(max_length=100)
   
     class Meta:
